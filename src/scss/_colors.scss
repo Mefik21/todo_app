@@ -1,0 +1,24 @@
+/* color helpers */
+$colors: 'white', 'black', 'brand', 'brand2', 'gray1', 'gray2', 'gray3', 'gray4', 'green', 'red', 'yellow', 'blue',
+    'none';
+
+@each $color in $colors {
+    .border-#{$color} {
+        border: 1px solid var(--#{$color});
+    }
+    .border-color-#{$color} {
+        border-color: var(--#{$color});
+    }
+    .color-#{$color} {
+        color: var(--#{$color});
+    }
+    .bg-#{$color} {
+        background: var(--#{$color});
+    }
+}
+
+.border-0 {
+    border: none;
+}
+
+/* endof color helpers */

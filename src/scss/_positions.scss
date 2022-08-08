@@ -1,0 +1,30 @@
+$positions: sticky, fixed, relative, absolute, static;
+
+$medias: (
+  "sm": "576px",
+  "md": "768px",
+  "lg": "992px",
+  "xl": "1200px",
+);
+
+@each $value in $positions {
+  .position-#{$value} {
+    position: $value;
+  }
+}
+
+@each $media, $size in $medias {
+  @media screen and (min-width: $size) {
+    //weight
+    @each $value in $positions {
+      .position-#{$media}-#{$value} {
+        position: $value;
+      }
+    }
+  }
+}
+
+.position-sticky{
+    top: 0;
+    z-index: 50;
+}

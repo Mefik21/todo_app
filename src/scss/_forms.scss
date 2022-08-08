@@ -1,0 +1,274 @@
+form {
+  position: relative;
+}
+
+label {
+  margin-bottom: 0;
+}
+
+.form {
+  position: relative;
+  width: 100%;
+}
+
+.form .label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.form .btn {
+  width: 100%;
+  position: relative;
+}
+
+.form .btn:hover {
+  color: var(--green);
+  box-shadow: 0 8px 10px rgb(0 0 0 / 20%);
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.form .input-wrapper {
+  position: relative;
+}
+
+.form .input-wrapper > .text-badge {
+  font-weight: 600;
+  top: calc(50% - 8px);
+  right: 20px;
+  padding: 1px 9px;
+  cursor: pointer;
+}
+
+.form .input-wrapper > .text-badge.bg-brand.show-password.password-new,
+.form .input-wrapper > .text-badge.bg-brand.hide-password.password-new {
+  font-weight: 600;
+  top: calc(50% + 4px);
+  right: 20px;
+  padding: 1px 9px;
+  cursor: pointer;
+}
+
+.form .input-wrapper > input[type="password"] ~ .hide-password {
+  display: none;
+}
+
+.form .input-wrapper > input[type="password"] ~ .show-password {
+  display: block;
+}
+
+.form .input-wrapper > input[type="text"] ~ .hide-password {
+  display: block;
+}
+
+.form .input-wrapper > input[type="text"] ~ .show-password {
+  display: none;
+}
+
+.form .form-group.error .input-wrapper > .text-badge,
+.form .form-group.done .input-wrapper > .text-badge {
+  right: 35px;
+}
+
+.form .input-wrapper > input {
+  // padding-right: 80px;
+  width: 100%;
+}
+
+.form .form-group.error .input-wrapper > input,
+.form .form-group.done .input-wrapper > input {
+  padding-right: 100px;
+}
+
+.form .form-group.error .input-wrapper > .text-badge {
+  background: var(--red);
+}
+
+.form .form-group.error .input-wrapper > input {
+  border-color: var(--red);
+}
+
+.form .form-group.error .input-wrapper::after {
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 8px);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--red);
+  content: "!";
+}
+
+.form .form-group.done .input-wrapper::after {
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 8px);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--green);
+  content: "\2713";
+}
+
+form .form-control {
+  font-size: 18px;
+  line-height: 1.3;
+  position: relative;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid rgba(108, 117, 125, 0.5);
+}
+
+.form .form-control.textarea {
+  height: 100px;
+  width: 100%;
+}
+
+.form-control:focus,
+.form-control:hover {
+  border: 1px solid var(--gray3);
+  box-shadow: none;
+}
+
+.form-control:focus:disabled,
+.form-control:hover:disabled {
+  border: 1px solid rgba(108, 117, 125, 0.5);
+}
+
+.form .form-control::placeholder {
+  color: var(--gray3);
+  opacity: 0.5;
+}
+
+.form input[type="checkbox"] {
+  /* border: 2px solid #7876f2; */
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  margin-bottom: -5px;
+  position: absolute;
+}
+
+.form .form-group > .field-error {
+  display: none;
+  color: var(--red);
+}
+
+.form .form-group > .field-notification {
+  display: none;
+  color: var(--warning);
+}
+
+.form .form-group.error > .field-error {
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+  margin-top: 10px;
+}
+
+.form .form-group.notification > .field-notification {
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+  margin-top: 10px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+}
+
+.form-search input.form-control {
+  padding-left: 50px;
+}
+
+.form-search .search-icon {
+  position: absolute;
+  left: 17px;
+  top: 17px;
+  width: 17px;
+  height: 17px;
+}
+
+.form .react-select__control {
+  height: 50px;
+  border: 1px solid rgba(108, 117, 125, 0.5);
+  transition-duration: 0.15s;
+  border-radius: 6px;
+}
+
+.form .react-select__control:hover {
+  height: 50px;
+  border: 1px solid var(--gray3);
+}
+
+.form .react-select__control--is-focused {
+  border: 1px solid var(--gray3);
+  box-shadow: none;
+}
+
+.table-select .react-select__control {
+  height: 38px;
+  border: 1px solid rgba(108, 117, 125, 0.5);
+  transition-duration: 0.15s;
+  border-radius: 6px;
+}
+
+.table-select .react-select__control:hover {
+  height: 38px;
+  border: 1px solid var(--gray3);
+}
+
+.table-select .react-select__control--is-focused {
+  border: 1px solid var(--gray3);
+  box-shadow: none;
+}
+
+.search {
+  width: 100%;
+}
+
+.input-search {
+  width: 100%;
+  border: none;
+  padding-right: 15px;
+  position: relative;
+  padding-left: 30px;
+}
+.input-search:focus {
+  outline: none;
+}
+
+.input-search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.search .btn .search-icon {
+  position: absolute;
+  left: 16px;
+  top: 13px;
+  width: 20px;
+  height: 20px;
+}

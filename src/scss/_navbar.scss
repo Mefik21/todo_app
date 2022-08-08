@@ -1,0 +1,324 @@
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-toggler {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+@media only screen and (max-width: 650px) {
+  button.navbar-toggler {
+    padding-right: 0;
+  }
+}
+
+// .navbar-toggler-icon {
+//     width: 60px;
+//     height: 60px;
+//     background-image: url(/assets/img/icons/hamburger_menu.svg);
+// }
+
+.menu .nav-item a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.menu hr {
+  width: calc(100% - 20px * 2);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.menu .profile-block .btn-signin {
+  width: 100%;
+  font-size: 18px;
+}
+
+.menu .profile-block .user-info .img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.top-menu-wrapper .menu .nav-item {
+  color: var(--black);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 45px;
+  padding: 0 20px;
+  margin: 0 5px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.top-menu-wrapper .menu .nav-item::after {
+  content: "";
+  display: block;
+  width: 0;
+  border-bottom: 3px solid var(--green);
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transition: left 0.2s, width 0.2s;
+}
+
+.top-menu-wrapper .menu .nav-item.active,
+.top-menu-wrapper .menu .nav-item:hover{
+    color: var(--green);
+}
+
+.top-menu-wrapper .menu .nav-item.active::after,
+.top-menu-wrapper .menu .nav-item:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.right-menu-wrapper {
+  //   transition: opacity 0.5s ease-out;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.right-menu-wrapper.open {
+  pointer-events: all;
+}
+
+.right-menu-wrapper .overlay {
+  background: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.right-menu-wrapper.open .overlay {
+  transition: background 0.5s ease-out;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.right-menu-wrapper.closing .overlay {
+  transition: background 0.5s ease-out;
+  background: none;
+}
+
+.right-menu-wrapper .menu {
+  height: 100%;
+  overflow: auto;
+  width: 320px;
+  margin-right: -320px;
+  // forcing hardware acceleration to get rid of first-draw lag
+  transform: translateZ(0);
+  padding: 20px 0;
+}
+
+.right-menu-wrapper .menu .close-block {
+  height: 60px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.right-menu-wrapper .menu .close-block img {
+  height: 24px;
+  width: 24px;
+}
+
+.right-menu-wrapper .menu .nav-item {
+  color: var(--black);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 45px;
+  margin-bottom: 10px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.right-menu-wrapper .menu .nav-item .link-content {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.right-menu-wrapper .menu .nav-item .link-content::after {
+  content: "";
+  display: block;
+  width: 0;
+  border-bottom: 3px solid #2c9155;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transition: left 0.2s, width 0.2s;
+}
+
+.right-menu-wrapper .menu .nav-item.active,
+.right-menu-wrapper .menu .nav-item:hover {
+  color: var(--green);
+}
+
+.right-menu-wrapper .menu .nav-item.active .link-content::after,
+.right-menu-wrapper .menu .nav-item:hover .link-content::after {
+  left: 0;
+  width: 100%;
+}
+
+.right-menu-wrapper .menu .nav-item a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.right-menu-wrapper.open .menu {
+  transition: margin-right 0.35s ease-out;
+  margin-right: 0;
+}
+
+.right-menu-wrapper.closing .menu {
+  transition: all 0.35s ease-out;
+  margin-right: -320px;
+}
+
+.right-menu-wrapper .menu hr {
+  width: calc(100% - 40px);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.right-menu-wrapper .menu .close-block {
+  height: 60px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.right-menu-wrapper .menu .close-block img {
+  height: 24px;
+  width: 24px;
+}
+
+
+.profile-dropdown {
+  background-color: #fff;
+  color: var(--black);
+  width: 280px;
+  padding: 1px 0;
+  border: 1px solid var(--gray2);
+  border-radius: 3px
+}
+
+.profile-dropdown .profile-block {
+  width: 100%;
+  border-radius: 9px
+}
+
+.profile-dropdown .profile-block .user-info {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.profile-dropdown .profile-block .user-info .img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%
+}
+
+.profile-dropdown .profile-block .link-block {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.profile-dropdown .profile-block .link-block.logout {
+  margin-bottom: 10px
+}
+
+.profile-dropdown .profile-block .link-block .link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  color: inherit;
+  border-bottom: none
+}
+
+.profile-dropdown .profile-block .link-block:hover {
+  color: var(--brand)
+}
+
+.profile-dropdown .profile-block .link-block .link .link-content {
+  text-align: left;
+  margin-left: 22px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.profile-dropdown .profile-block .link-block .link-content::after {
+  content: "";
+  display: block;
+  width: 0;
+  border-bottom: 3px solid var(--green);
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transition: left 0.2s, width 0.2s;
+}
+
+.profile-dropdown .profile-block .link-block.active,
+.profile-dropdown .profile-block .link-block:hover{
+    color: var(--green);
+}
+
+.profile-dropdown .profile-block .link-block.active .link-content::after,
+.profile-dropdown .profile-block .link-block:hover .link-content::after {
+  left: 0;
+  width: 100%;
+}
+
+.profile-dropdown .profile-block .link-block .link .link-content .link-text {
+  // margin-left: 10px
+}
+
+.profile-dropdown-menu .tippy-content {
+  background-color: transparent;
+  padding: 0
+}
+

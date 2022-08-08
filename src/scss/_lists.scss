@@ -1,0 +1,8 @@
+$listTypes: none, disc, circle, decimal, decimal-leading-zero, none, square;
+
+@each $type in $listTypes {
+  .list-style-#{$type} {
+    list-style-type: $type;
+  }
+}
+

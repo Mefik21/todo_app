@@ -1,0 +1,19 @@
+$max-border-width: 10;
+
+$radiuses: 3, 5, 10, 15, 20;
+
+.border-none {
+  border: none;
+}
+
+@for $i from 0 through $max-border-width {
+  .border-width-#{$i} {
+    border-width: 0px + $i;
+  }
+}
+
+@each $value in $radiuses {
+  .border-radius-#{$value} {
+    border-radius: 0px + $value;
+  }
+}
